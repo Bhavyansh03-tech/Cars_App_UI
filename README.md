@@ -12,14 +12,14 @@ A complex and elegant UI design for a rental car application built using Jetpack
 ## Screenshots
 ### Light Mode :
 <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="https://github.com/user-attachments/assets/8523e91f-7ac6-453f-85df-2d473d0b972a" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/59f2eb97-5bcd-4f49-9c33-d74fdc53c146" alt="Second Screenshot" style="width: 200px; height: auto;">
+    <img src="https://github.com/user-attachments/assets/f49a7cb8-dcf1-404f-a3d6-493296a6f685" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/4dbe526e-5d1a-4d2b-8352-b47ecb2312d3" alt="Second Screenshot" style="width: 200px; height: auto;">
 </div>
 
 ### Dark Mode :
 <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="https://github.com/user-attachments/assets/51b817bb-b134-4e42-a3b9-d403fb9ac8c0" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
-    <img src="https://github.com/user-attachments/assets/c144771e-e7c8-41b6-be67-66e5a65f6e3f" alt="Second Screenshot" style="width: 200px; height: auto;">
+    <img src="https://github.com/user-attachments/assets/fb13cc5b-f568-45f0-967d-36fc11b3525a" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/8717acd5-6da8-436f-b0fd-36a1277dcd32" alt="Second Screenshot" style="width: 200px; height: auto;">
 </div>
 
 ## Getting Started
