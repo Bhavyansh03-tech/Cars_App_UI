@@ -1,5 +1,6 @@
 package com.example.cars_app_ui.topBar
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,6 +24,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cars_app_ui.ui.theme.Blur
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.HazeStyle
+import dev.chrisbanes.haze.hazeChild
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -32,15 +37,22 @@ fun TopBar(
 ) {
     TopAppBar(
         scrollBehavior = scrollBehavior,
-        modifier = modifier,
+        modifier = modifier.hazeChild(
+            state = HazeState(),
+            style = HazeStyle(
+                blurRadius = 13.dp,
+                tint = Blur,
+                backgroundColor = Blur
+            )
+        ),
         colors = TopAppBarDefaults.topAppBarColors( // Making it transparent to add glass morphism effect.
-            containerColor = Color.Transparent,
-            scrolledContainerColor = Color.Transparent
+            containerColor = Blur,
+            scrolledContainerColor = Blur
         ),
         title = {
             // Replace it with text basic layout.
             Row(
-                modifier = Modifier
+                modifier = modifier
                     .padding(end = 16.dp)  // Because title have start padding as default but not the end padding.
                     .height(60.dp)
                     .border(

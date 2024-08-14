@@ -23,14 +23,25 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cars_app_ui.ui.theme.Blur
 import com.example.cars_app_ui.ui.theme.Primary
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.HazeStyle
+import dev.chrisbanes.haze.hazeChild
 
 @Composable
 fun Pager(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier
+        modifier = modifier.hazeChild(
+            state = HazeState(),
+            style = HazeStyle(
+                blurRadius = 13.dp,
+                tint = Blur,
+                backgroundColor = Blur
+            )
+        )
     ) {
         Spacer(modifier = Modifier.height(10.dp))
 

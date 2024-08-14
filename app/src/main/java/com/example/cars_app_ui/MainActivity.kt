@@ -15,19 +15,23 @@ import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.cars_app_ui.mainScreen.HomeScreen
 import com.example.cars_app_ui.topBar.Pager
 import com.example.cars_app_ui.topBar.TopBar
+import com.example.cars_app_ui.ui.theme.Blur
 import com.example.cars_app_ui.ui.theme.CarsAppUITheme
 import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
 
+@OptIn(ExperimentalMaterial3Api::class)
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -52,7 +56,14 @@ class MainActivity : ComponentActivity() {
                     topBar = {
                         Column {
                             TopBar(
-                                modifier = Modifier.hazeChild(state = hazeState),
+                                modifier = Modifier.hazeChild(
+                                    state = remember { HazeState() },
+                                    style = HazeStyle(
+                                        blurRadius = 13.dp,
+                                        tint = Blur,
+                                        backgroundColor = Blur
+                                    )
+                                ),
                                 scrollBehavior = scrollBehavior
                             )
 
@@ -80,5 +91,9 @@ class MainActivity : ComponentActivity() {
             controller.systemBarsBehavior =
                 WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
+
+        // Set status bar color to transparent
+        window.statusBarColor = Color.Transparent.toArgb()
     }
+
 }

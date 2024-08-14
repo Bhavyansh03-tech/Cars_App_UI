@@ -11,6 +11,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.cars_app_ui.mainScreen.bottomBar.BottomBar
 import com.example.cars_app_ui.mainScreen.cars.CarList
@@ -36,7 +37,8 @@ fun HomeScreen(
                     state = hazeState,
                     style = HazeStyle(
                         blurRadius = 13.dp,
-                        tint = Blur
+                        tint = Blur,
+                        backgroundColor = Blur
                     )
                 ),
             paddingValues = paddingValues
@@ -50,7 +52,12 @@ fun HomeScreen(
                 .padding(bottom = 26.dp)
                 .hazeChild(
                     state = hazeState,
-                    shape = RoundedCornerShape(26.dp)
+                    shape = RoundedCornerShape(26.dp),
+                    style = HazeStyle(
+                        blurRadius = 13.dp,
+                        tint = Blur,
+                        backgroundColor = Blur
+                    )
                 )
         )
     }
